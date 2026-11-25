@@ -290,6 +290,42 @@ textarea.form-control {
    AUTH OPTIONS
 ========================= */
 
+.login-role-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 17px;
+}
+
+.login-role-option {
+    position: relative;
+}
+
+.login-role-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.login-role-option span {
+    display: block;
+    border: 1px solid #dfe3eb;
+    background: #fbfcfe;
+    color: #687082;
+    border-radius: 9px;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-role-option input:checked + span {
+    border-color: #3969d7;
+    background: #edf3ff;
+    color: #3969d7;
+    box-shadow: 0 0 0 3px rgba(57,105,215,.08);
+}
+
 .auth-options {
     display: flex;
     justify-content: space-between;
@@ -447,6 +483,476 @@ textarea.form-control {
 .nav-item.active {
     background: #263354;
     color: white;
+}
+
+.admin-nav-item {
+    background: #263354;
+    color: #dbe5ff;
+}
+
+.admin-panel {
+    background: white;
+    border: 1px solid #e8ebf1;
+    border-radius: 11px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.admin-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.admin-panel-header h3 {
+    font-size: 15px;
+}
+
+.admin-panel-header p {
+    color: #8991a0;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    padding: 14px 16px 0;
+}
+
+.admin-stat {
+    background: #f7f9fd;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.admin-stat span {
+    display: block;
+    color: #8991a0;
+    font-size: 9px;
+}
+
+.admin-stat strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 18px;
+}
+
+.admin-tools {
+    display: grid;
+    grid-template-columns: minmax(180px, 2fr) 1fr 1fr;
+    gap: 8px;
+    padding: 14px 16px 0;
+}
+
+.admin-tools input,
+.admin-tools select {
+    width: 100%;
+    border: 1px solid #dfe3eb;
+    background: #fbfcfe;
+    border-radius: 8px;
+    padding: 9px 10px;
+    font-size: 10px;
+    outline: none;
+}
+
+.admin-last-updated {
+    color: #8991a0;
+    font-size: 9px;
+}
+
+.admin-task-tools {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 8px;
+    margin: 16px;
+}
+
+.admin-task-tools input,
+.admin-task-tools select {
+    width: 100%;
+    border: 1px solid #dfe3eb;
+    background: #fbfcfe;
+    border-radius: 8px;
+    padding: 9px 10px;
+    font-size: 10px;
+    outline: none;
+}
+
+.admin-task-title {
+    padding: 0 16px;
+    margin: 5px 0 0;
+}
+
+.admin-task-title h3 {
+    font-size: 13px;
+}
+
+.admin-task-title p {
+    color: #8991a0;
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+.admin-table-wrap {
+    overflow-x: auto;
+    padding: 16px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.admin-table th,
+.admin-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.admin-table th {
+    color: #8991a0;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.role-badge {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 4px 8px;
+    background: #eef3ff;
+    color: #3969d7;
+    text-transform: capitalize;
+}
+
+.role-badge.admin {
+    background: #fff0f0;
+    color: #b84444;
+}
+
+.status-badge {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 4px 8px;
+    background: #eaf8ef;
+    color: #27834b;
+}
+
+.status-badge.inactive {
+    background: #fff0f0;
+    color: #b84444;
+}
+
+.admin-action {
+    border: 1px solid #dde3ec;
+    background: white;
+    color: #566176;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 9px;
+}
+
+.admin-action.delete {
+    color: #bd4848;
+}
+
+.admin-eyebrow {
+    display: block;
+    color: #3969d7;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 4px;
+}
+
+.admin-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-export-btn {
+    border: 1px solid #dfe3eb;
+    background: white;
+    color: #3969d7;
+    border-radius: 7px;
+    padding: 8px 10px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 8px 16px 0;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.admin-tab {
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: #8991a0;
+    padding: 9px 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.admin-tab.active {
+    border-bottom-color: #3969d7;
+    color: #3969d7;
+}
+
+.admin-section {
+    padding-bottom: 2px;
+}
+
+.admin-stat small {
+    display: block;
+    color: #9aa1ae;
+    font-size: 8px;
+    margin-top: 5px;
+}
+
+.admin-overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 12px 16px 16px;
+}
+
+.admin-workload-card {
+    border: 1px solid #edf0f5;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.admin-card-heading,
+.admin-section-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-card-heading h4,
+.admin-section-toolbar h4 {
+    font-size: 12px;
+}
+
+.admin-card-heading p,
+.admin-section-toolbar p {
+    color: #8991a0;
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+.admin-section-toolbar {
+    padding: 14px 16px 0;
+}
+
+.admin-health-list,
+.admin-priority-list,
+.admin-activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.admin-health-row,
+.admin-priority-row,
+.admin-activity-row {
+    display: grid;
+    align-items: center;
+    gap: 9px;
+    font-size: 10px;
+}
+
+.admin-health-row {
+    grid-template-columns: 75px 1fr 30px;
+}
+
+.admin-health-track {
+    height: 7px;
+    border-radius: 20px;
+    background: #edf0f5;
+    overflow: hidden;
+}
+
+.admin-health-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: #3969d7;
+}
+
+.admin-priority-row {
+    grid-template-columns: minmax(110px, 1fr) 60px 55px;
+    padding: 8px;
+    border: 1px solid #edf0f5;
+    border-radius: 7px;
+}
+
+.admin-priority-row strong {
+    font-size: 9px;
+}
+
+.admin-activity-list {
+    padding: 14px 16px 16px;
+}
+
+.admin-activity-row {
+    grid-template-columns: 34px 1fr auto;
+    padding: 9px;
+    border: 1px solid #edf0f5;
+    border-radius: 8px;
+}
+
+.admin-activity-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background: #eef3ff;
+}
+
+.admin-activity-row p {
+    font-size: 10px;
+}
+
+.admin-activity-row small {
+    color: #9aa1ae;
+    font-size: 8px;
+}
+
+.feature-panel {
+    background: white;
+    border: 1px solid #e8ebf1;
+    border-radius: 11px;
+    padding: 16px;
+    margin-bottom: 15px;
+}
+
+.feature-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.feature-panel-header h3,
+.breakdown-card h4,
+.settings-card h4 {
+    font-size: 14px;
+}
+
+.feature-panel-header p {
+    color: #8991a0;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.feature-stat {
+    background: #f7f9fd;
+    border-radius: 8px;
+    padding: 13px;
+}
+
+.feature-stat span {
+    display: block;
+    color: #8991a0;
+    font-size: 9px;
+    margin-bottom: 5px;
+}
+
+.feature-stat strong {
+    font-size: 20px;
+}
+
+.breakdown-card,
+.settings-card {
+    border: 1px solid #edf0f5;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.breakdown-card {
+    margin-top: 12px;
+}
+
+.breakdown-row {
+    display: grid;
+    grid-template-columns: 90px 1fr 35px;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.breakdown-track {
+    height: 7px;
+    background: #edf0f5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.breakdown-fill {
+    height: 100%;
+    background: #3969d7;
+    border-radius: 20px;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.settings-card p {
+    color: #8991a0;
+    font-size: 10px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.settings-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.secondary-action,
+.danger-action,
+.settings-save {
+    border: 1px solid #dde3ec;
+    border-radius: 7px;
+    background: white;
+    color: #566176;
+    padding: 9px 10px;
+    font-size: 10px;
+}
+
+.danger-action {
+    color: #bd4848;
+}
+
+.settings-save {
+    background: #3969d7;
+    color: white;
+    border: none;
 }
 
 .sidebar-bottom {
@@ -1084,6 +1590,14 @@ textarea.form-control {
         grid-template-columns: repeat(2,1fr);
     }
 
+    .admin-stats {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .admin-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
     .kanban {
         grid-template-columns: 1fr;
     }
@@ -1105,8 +1619,31 @@ textarea.form-control {
 
 @media(max-width:600px) {
 
+    .admin-stats,
+    .admin-overview-grid,
+    .admin-tools,
+    .admin-task-tools,
+    .feature-grid,
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+
     .main {
         padding: 15px;
+    }
+
+    .admin-tabs {
+        overflow-x: auto;
+    }
+
+    .admin-header-actions {
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .admin-table-wrap {
+        padding: 12px;
     }
 
     .stats-grid {
@@ -1214,6 +1751,31 @@ with a simple and powerful task management system.
 <div id="authMessage" class="auth-message"></div>
 
 <form id="signInForm">
+
+<label>Login As</label>
+
+<div class="login-role-group">
+
+<label class="login-role-option">
+<input
+ type="radio"
+ name="loginRole"
+ value="user"
+ checked
+>
+<span>👤 User</span>
+</label>
+
+<label class="login-role-option">
+<input
+ type="radio"
+ name="loginRole"
+ value="admin"
+>
+<span>🛡️ Admin</span>
+</label>
+
+</div>
 
 <div class="form-group">
 
@@ -1500,23 +2062,32 @@ Sign In
 
 <nav>
 
-<button class="nav-item active">
+<button id="dashboardNavItem" class="nav-item active" onclick="showDashboardView()">
 🏠 Dashboard
 </button>
 
 <button
+id="newTaskNavItem"
 class="nav-item"
 onclick="openTaskModal()"
 >
 ➕ New Task
 </button>
 
-<button class="nav-item">
+<button id="analyticsNavItem" class="nav-item" onclick="showAnalyticsView()">
 📊 Analytics
 </button>
 
-<button class="nav-item">
+<button id="settingsNavItem" class="nav-item" onclick="showSettingsView()">
 ⚙️ Settings
+</button>
+
+<button
+id="adminNavItem"
+class="nav-item admin-nav-item hidden"
+onclick="showAdminView()"
+>
+🛡️ Admin
 </button>
 
 </nav>
@@ -1568,11 +2139,11 @@ onclick="logout()"
 <div>
 
 <h2>
-Good day,
-<span id="userName">User</span> 👋
+<span id="moduleGreeting">Good day</span>,
+<span id="userName">User</span> <span id="moduleIcon">👋</span>
 </h2>
 
-<p>
+<p id="moduleSubtitle">
 Let's make today productive.
 </p>
 
@@ -1589,6 +2160,8 @@ onclick="openTaskModal()"
 </header>
 
 
+
+<div id="userModule">
 
 <!-- QUOTE -->
 
@@ -1756,11 +2329,151 @@ Complete your first task to start your goal.
 
 </section>
 
+</div>
+
+
+
+<!-- ADMIN PANEL -->
+
+<section id="adminPanel" class="admin-panel hidden">
+
+<div class="admin-panel-header">
+<div>
+<span class="admin-eyebrow">TASKFLOW CONTROL CENTER</span>
+<h3>Administration</h3>
+<p>Monitor operations, manage access, and keep work moving.</p>
+</div>
+<div class="admin-header-actions">
+<span id="adminLastUpdated" class="admin-last-updated">Live overview</span>
+<button type="button" class="admin-export-btn" onclick="exportAllUsers()">Export Data</button>
+</div>
+</div>
+
+<div class="admin-tabs" role="tablist">
+<button class="admin-tab active" data-admin-tab="overview" onclick="showAdminSection('overview')">Overview</button>
+<button class="admin-tab" data-admin-tab="tasks" onclick="showAdminSection('tasks')">Tasks</button>
+<button class="admin-tab" data-admin-tab="users" onclick="showAdminSection('users')">Users</button>
+<button class="admin-tab" data-admin-tab="activity" onclick="showAdminSection('activity')">Activity</button>
+</div>
+
+<section id="adminOverviewSection" class="admin-section">
+<div class="admin-stats">
+<div class="admin-stat"><span>Total users</span><strong id="adminUserCount">0</strong><small id="adminUserCountNote">Registered accounts</small></div>
+<div class="admin-stat"><span>Administrators</span><strong id="adminCount">0</strong><small>Role holders</small></div>
+<div class="admin-stat"><span>All tasks</span><strong id="adminTaskCount">0</strong><small>Across the platform</small></div>
+<div class="admin-stat"><span>Active accounts</span><strong id="adminActiveCount">0</strong><small id="adminActiveCountNote">Ready to sign in</small></div>
+<div class="admin-stat"><span>In progress</span><strong id="adminProgressCount">0</strong><small>Currently active work</small></div>
+<div class="admin-stat"><span>Overdue</span><strong id="adminOverdueCount">0</strong><small>Needs attention</small></div>
+</div>
+
+<div class="admin-overview-grid">
+<div class="admin-workload-card">
+<div class="admin-card-heading"><div><h4>Task health</h4><p>Platform-wide status distribution</p></div></div>
+<div id="adminTaskHealth" class="admin-health-list"></div>
+</div>
+<div class="admin-workload-card">
+<div class="admin-card-heading"><div><h4>Priority queue</h4><p>Open work ordered by urgency</p></div></div>
+<div id="adminPriorityQueue" class="admin-priority-list"></div>
+</div>
+</div>
+</section>
+
+<section id="adminTasksSection" class="admin-section hidden">
+<div class="admin-section-toolbar">
+<div><h4>Task Queue</h4><p>Search and manage work across every account.</p></div>
+</div>
+<div class="admin-task-tools">
+<input id="adminTaskSearch" type="search" placeholder="Search title, category, or owner" oninput="renderAdminPanel()">
+<select id="adminTaskStatus" onchange="renderAdminPanel()"><option value="all">All statuses</option><option value="todo">To Do</option><option value="progress">In Progress</option><option value="completed">Completed</option></select>
+<select id="adminTaskPriority" onchange="renderAdminPanel()"><option value="all">All priorities</option><option value="High">High</option><option value="Medium">Medium</option><option value="Low">Low</option></select>
+</div>
+<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Task</th><th>Owner</th><th>Priority</th><th>Status</th><th>Deadline</th><th>Action</th></tr></thead><tbody id="adminTaskRows"></tbody></table></div>
+</section>
+
+<section id="adminUsersSection" class="admin-section hidden">
+<div class="admin-section-toolbar">
+<div><h4>User Directory</h4><p>Control roles, account status, and access.</p></div>
+</div>
+<div class="admin-tools">
+<input id="adminUserSearch" type="search" placeholder="Search name or email" oninput="renderAdminPanel()">
+<select id="adminRoleFilter" onchange="renderAdminPanel()"><option value="all">All roles</option><option value="admin">Admins</option><option value="user">Users</option></select>
+<select id="adminStatusFilter" onchange="renderAdminPanel()"><option value="all">All statuses</option><option value="active">Active</option><option value="inactive">Inactive</option></select>
+</div>
+<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>User</th><th>Email</th><th>Role</th><th>Status</th><th>Tasks</th><th>Actions</th></tr></thead><tbody id="adminUserRows"></tbody></table></div>
+</section>
+
+<section id="adminActivitySection" class="admin-section hidden">
+<div class="admin-section-toolbar"><div><h4>Recent Activity</h4><p>Latest platform events and task updates.</p></div></div>
+<div id="adminActivityRows" class="admin-activity-list"></div>
+</section>
+
+</section>
+
+
+<!-- ANALYTICS -->
+
+<section id="analyticsPanel" class="feature-panel hidden">
+<div class="feature-panel-header">
+<div>
+<h3 id="analyticsTitle">Analytics</h3>
+<p id="analyticsSubtitle">Performance overview</p>
+</div>
+<button type="button" class="secondary-action" onclick="exportAnalytics()">Export Report</button>
+</div>
+<div class="feature-grid">
+<div class="feature-stat"><span id="analyticsMetric1Label">Metric</span><strong id="analyticsMetric1">0</strong></div>
+<div class="feature-stat"><span id="analyticsMetric2Label">Metric</span><strong id="analyticsMetric2">0</strong></div>
+<div class="feature-stat"><span id="analyticsMetric3Label">Metric</span><strong id="analyticsMetric3">0</strong></div>
+<div class="feature-stat"><span id="analyticsMetric4Label">Metric</span><strong id="analyticsMetric4">0</strong></div>
+</div>
+<div class="breakdown-card">
+<h4 id="breakdownTitle">Breakdown</h4>
+<div id="analyticsBreakdown"></div>
+</div>
+</section>
+
+
+<!-- SETTINGS -->
+
+<section id="settingsPanel" class="feature-panel hidden">
+<div class="feature-panel-header">
+<div>
+<h3>Settings</h3>
+<p id="settingsSubtitle">Personal account preferences</p>
+</div>
+</div>
+<div class="settings-grid">
+<div class="settings-card">
+<h4>Profile</h4>
+<div class="form-group">
+<label>Display Name</label>
+<input id="settingsName" class="form-control" type="text">
+</div>
+<div class="form-group">
+<label>Email Address</label>
+<input id="settingsEmail" class="form-control" type="email">
+</div>
+<button type="button" class="save-btn settings-save" onclick="saveProfileSettings()">Save Profile</button>
+</div>
+<div class="settings-card">
+<h4>Data & Privacy</h4>
+<p id="settingsDataDescription">Export or maintain your personal workspace.</p>
+<div class="settings-actions">
+<button type="button" class="secondary-action" onclick="exportUserData()">Export My Data</button>
+<button id="clearCompletedButton" type="button" class="danger-action" onclick="clearCompletedTasks()">Clear Completed Tasks</button>
+</div>
+<div id="adminSettingsActions" class="settings-actions hidden">
+<button type="button" class="secondary-action" onclick="exportAllUsers()">Export All Accounts</button>
+<button type="button" class="danger-action" onclick="resetPlatformTasks()">Reset All Tasks</button>
+</div>
+</div>
+</div>
+</section>
 
 
 <!-- SEARCH -->
 
-<section class="tools-bar">
+<section id="dashboardTools" class="tools-bar">
 
 <input
 type="text"
@@ -2233,6 +2946,43 @@ JSON.parse(localStorage.getItem("taskflowCurrentUser")) || null;
 
 
 /* =====================================================
+   ADMIN BOOTSTRAP
+===================================================== */
+
+const adminEmail = "admin@taskflow.com";
+
+if(!users.some(user => user.email === adminEmail)){
+
+users.push({
+id:1,
+name:"TaskFlow Admin",
+email:adminEmail,
+password:"Admin@123",
+role:"admin",
+createdAt:new Date().toISOString()
+});
+
+localStorage.setItem("taskflowUsers",JSON.stringify(users));
+
+}
+
+users = users.map(user => ({
+...user,
+role:user.role || "user",
+active:user.active !== false
+}));
+
+const firstUser = users.find(user => user.role !== "admin");
+tasks = tasks.map(task => ({
+...task,
+ownerId:task.ownerId || (firstUser ? firstUser.id : null)
+}));
+
+localStorage.setItem("taskflowUsers",JSON.stringify(users));
+localStorage.setItem("taskflowTasks",JSON.stringify(tasks));
+
+
+/* =====================================================
    QUOTES
 ===================================================== */
 
@@ -2598,6 +3348,10 @@ email:email,
 
 password:password,
 
+role:"user",
+
+active:true,
+
 createdAt:new Date().toISOString()
 
 };
@@ -2715,6 +3469,10 @@ const password =
 document.getElementById("signInPassword")
 .value;
 
+const loginRole =
+document.querySelector('input[name="loginRole"]:checked')
+.value;
+
 
 clearSigninErrors();
 
@@ -2772,13 +3530,41 @@ return;
 }
 
 
+if((user.role || "user") !== loginRole){
+
+showMessage(
+"authMessage",
+`This account is not authorized to login as ${loginRole === "admin" ? "Admin" : "User"}.`,
+"error"
+);
+
+return;
+
+}
+
+
+if(user.active === false){
+
+showMessage(
+"authMessage",
+"This account has been deactivated. Contact an administrator.",
+"error"
+);
+
+return;
+
+}
+
+
 currentUser = {
 
 id:user.id,
 
 name:user.name,
 
-email:user.email
+email:user.email,
+
+role:user.role || "user"
 
 };
 
@@ -2810,9 +3596,13 @@ updateUser();
 
 loadQuote();
 
+if(currentUser.role === "admin"){
+showAdminView();
+}else{
+showDashboardView();
 renderTasks();
-
 renderActivities();
+}
 
 });
 
@@ -2875,10 +3665,622 @@ document.getElementById("sidebarUserEmail")
 .textContent =
 currentUser.email;
 
+const loggedInUser = users.find(user => user.id === currentUser.id);
+if(loggedInUser){
+currentUser.role = loggedInUser.role || "user";
+localStorage.setItem("taskflowCurrentUser",JSON.stringify(currentUser));
+}
+
+const isAdmin = currentUser.role === "admin";
+document.querySelectorAll(".add-task-btn").forEach(button => {
+button.classList.toggle("hidden",isAdmin);
+});
+
 
 document.getElementById("userAvatar")
 .textContent =
 currentUser.name.charAt(0).toUpperCase();
+
+const adminNav =
+document.getElementById("adminNavItem");
+
+if(adminNav){
+adminNav.classList.toggle(
+"hidden",
+currentUser.role !== "admin"
+);
+}
+
+}
+
+
+/* =====================================================
+   ADMIN MODULE
+===================================================== */
+
+function showAdminView(){
+
+if(!currentUser || currentUser.role !== "admin") return;
+
+const userModule = document.getElementById("userModule");
+if(userModule) userModule.classList.add("hidden");
+
+[
+".quote-card",
+".stats-grid",
+".productivity-card",
+"#dashboardTools",
+".task-board",
+".kanban",
+".activity-card"
+].forEach(selector => {
+const element = document.querySelector(selector);
+if(element) element.classList.add("hidden");
+});
+
+document.getElementById("analyticsPanel").classList.add("hidden");
+document.getElementById("settingsPanel").classList.add("hidden");
+const panel = document.getElementById("adminPanel");
+panel.classList.remove("hidden");
+setRoleNavigation("admin");
+setActiveNavigation("adminNavItem");
+renderAdminPanel();
+showAdminSection("overview");
+
+}
+
+
+function showDashboardView(){
+
+if(currentUser && currentUser.role === "admin"){
+showAdminView();
+return;
+}
+
+document.getElementById("adminPanel").classList.add("hidden");
+document.getElementById("analyticsPanel").classList.add("hidden");
+document.getElementById("settingsPanel").classList.add("hidden");
+
+const userModule = document.getElementById("userModule");
+if(userModule) userModule.classList.remove("hidden");
+
+[
+".quote-card",
+".stats-grid",
+".productivity-card",
+"#dashboardTools",
+".task-board",
+".kanban",
+".activity-card"
+].forEach(selector => {
+const element = document.querySelector(selector);
+if(element) element.classList.remove("hidden");
+});
+
+setRoleNavigation("user");
+setActiveNavigation("dashboardNavItem");
+renderTasks();
+renderActivities();
+
+}
+
+
+function setRoleNavigation(role){
+
+const newTaskNav = document.getElementById("newTaskNavItem");
+const dashboardNav = document.getElementById("dashboardNavItem");
+const analyticsNav = document.getElementById("analyticsNavItem");
+const settingsNav = document.getElementById("settingsNavItem");
+const addTaskButton = document.querySelector(".add-task-btn");
+
+["dashboardNavItem","analyticsNavItem","settingsNavItem","adminNavItem"].forEach(id => {
+const item = document.getElementById(id);
+if(item) item.classList.remove("active");
+});
+
+if(role === "admin"){
+if(newTaskNav) newTaskNav.classList.add("hidden");
+if(dashboardNav) dashboardNav.classList.add("hidden");
+if(analyticsNav) analyticsNav.classList.add("hidden");
+if(settingsNav) settingsNav.classList.add("hidden");
+if(addTaskButton) addTaskButton.classList.add("hidden");
+if(dashboardNav) dashboardNav.classList.remove("active");
+document.getElementById("moduleGreeting").textContent = "Admin control center";
+document.getElementById("moduleSubtitle").textContent = "Manage users, roles, status and system activity.";
+document.getElementById("moduleIcon").textContent = "🛡️";
+}else{
+if(newTaskNav) newTaskNav.classList.remove("hidden");
+if(dashboardNav) dashboardNav.classList.remove("hidden");
+if(analyticsNav) analyticsNav.classList.remove("hidden");
+if(settingsNav) settingsNav.classList.remove("hidden");
+if(addTaskButton) addTaskButton.classList.remove("hidden");
+if(dashboardNav) dashboardNav.classList.add("active");
+document.getElementById("moduleGreeting").textContent = "Good day";
+document.getElementById("moduleSubtitle").textContent = "Let's make today productive.";
+document.getElementById("moduleIcon").textContent = "👋";
+}
+
+}
+
+
+function showAnalyticsView(){
+
+if(!currentUser) return;
+
+document.getElementById("adminPanel").classList.add("hidden");
+document.getElementById("settingsPanel").classList.add("hidden");
+document.getElementById("analyticsPanel").classList.remove("hidden");
+
+const userModule = document.getElementById("userModule");
+if(userModule) userModule.classList.toggle("hidden",currentUser.role === "admin");
+
+[".quote-card",".stats-grid",".productivity-card","#dashboardTools",".kanban",".activity-card"].forEach(selector => {
+const element = document.querySelector(selector);
+if(element) element.classList.toggle("hidden",true);
+});
+
+setRoleNavigation(currentUser.role);
+setActiveNavigation("analyticsNavItem");
+renderAnalytics();
+
+}
+
+
+function showSettingsView(){
+
+if(!currentUser) return;
+
+document.getElementById("adminPanel").classList.add("hidden");
+document.getElementById("analyticsPanel").classList.add("hidden");
+document.getElementById("settingsPanel").classList.remove("hidden");
+
+const userModule = document.getElementById("userModule");
+if(userModule) userModule.classList.toggle("hidden",currentUser.role === "admin");
+
+[".quote-card",".stats-grid",".productivity-card","#dashboardTools",".kanban",".activity-card"].forEach(selector => {
+const element = document.querySelector(selector);
+if(element) element.classList.add("hidden");
+});
+
+setRoleNavigation(currentUser.role);
+setActiveNavigation("settingsNavItem");
+populateSettings();
+
+}
+
+
+function showAdminSection(section){
+
+if(!currentUser || currentUser.role !== "admin") return;
+
+["overview","tasks","users","activity"].forEach(name => {
+const tab = document.querySelector(`[data-admin-tab="${name}"]`);
+const panel = document.getElementById(`admin${name.charAt(0).toUpperCase() + name.slice(1)}Section`);
+if(tab) tab.classList.toggle("active",name === section);
+if(panel) panel.classList.toggle("hidden",name !== section);
+});
+
+renderAdminPanel();
+
+}
+
+
+function setActiveNavigation(activeId){
+["dashboardNavItem","analyticsNavItem","settingsNavItem","adminNavItem"].forEach(id => {
+const item = document.getElementById(id);
+if(item) item.classList.toggle("active",id === activeId);
+});
+}
+
+
+function renderAnalytics(){
+
+if(currentUser.role === "admin"){
+const activeCount = users.filter(user => user.active !== false).length;
+const completed = tasks.filter(task => task.status === "completed").length;
+const overdue = tasks.filter(task => task.deadline && new Date(task.deadline + "T23:59:59") < new Date() && task.status !== "completed").length;
+
+document.getElementById("analyticsTitle").textContent = "Platform Analytics";
+document.getElementById("analyticsSubtitle").textContent = "Organization-wide activity overview";
+document.getElementById("analyticsMetric1Label").textContent = "Total Accounts";
+document.getElementById("analyticsMetric1").textContent = users.length;
+document.getElementById("analyticsMetric2Label").textContent = "Active Accounts";
+document.getElementById("analyticsMetric2").textContent = activeCount;
+document.getElementById("analyticsMetric3Label").textContent = "All Tasks";
+document.getElementById("analyticsMetric3").textContent = tasks.length;
+document.getElementById("analyticsMetric4Label").textContent = "Overdue Tasks";
+document.getElementById("analyticsMetric4").textContent = overdue;
+document.getElementById("breakdownTitle").textContent = "Account and task distribution";
+renderBreakdown([
+["Administrators",users.filter(user => user.role === "admin").length,users.length],
+["Standard users",users.filter(user => (user.role || "user") === "user").length,users.length],
+["Completed tasks",completed,tasks.length],
+["Overdue tasks",overdue,tasks.length]
+]);
+}else{
+const personalTasks = tasks.filter(task => task.ownerId === currentUser.id);
+const completed = personalTasks.filter(task => task.status === "completed").length;
+const progress = personalTasks.filter(task => task.status === "progress").length;
+const overdue = personalTasks.filter(task => task.deadline && new Date(task.deadline + "T23:59:59") < new Date() && task.status !== "completed").length;
+
+document.getElementById("analyticsTitle").textContent = "My Analytics";
+document.getElementById("analyticsSubtitle").textContent = "Personal productivity overview";
+document.getElementById("analyticsMetric1Label").textContent = "Total Tasks";
+document.getElementById("analyticsMetric1").textContent = personalTasks.length;
+document.getElementById("analyticsMetric2Label").textContent = "Completed";
+document.getElementById("analyticsMetric2").textContent = completed;
+document.getElementById("analyticsMetric3Label").textContent = "In Progress";
+document.getElementById("analyticsMetric3").textContent = progress;
+document.getElementById("analyticsMetric4Label").textContent = "Overdue";
+document.getElementById("analyticsMetric4").textContent = overdue;
+document.getElementById("breakdownTitle").textContent = "Tasks by category";
+
+const categories = {};
+personalTasks.forEach(task => {
+categories[task.category] = (categories[task.category] || 0) + 1;
+});
+const breakdown = Object.entries(categories).map(([label,count]) => [label,count,personalTasks.length]);
+renderBreakdown(breakdown.length ? breakdown : [["No tasks",0,1]]);
+}
+
+}
+
+
+function renderBreakdown(rows){
+
+const box = document.getElementById("analyticsBreakdown");
+box.innerHTML = rows.map(([label,count,total]) => {
+const percent = total ? Math.round(count / total * 100) : 0;
+return `<div class="breakdown-row"><span>${escapeHTML(label)}</span><div class="breakdown-track"><div class="breakdown-fill" style="width:${percent}%"></div></div><strong>${count}</strong></div>`;
+}).join("");
+
+}
+
+
+function populateSettings(){
+
+document.getElementById("settingsName").value = currentUser.name;
+document.getElementById("settingsEmail").value = currentUser.email;
+
+const isAdmin = currentUser.role === "admin";
+document.getElementById("settingsSubtitle").textContent = isAdmin ? "Administrator account and platform controls" : "Personal account preferences and data";
+document.getElementById("adminSettingsActions").classList.toggle("hidden",!isAdmin);
+document.getElementById("clearCompletedButton").classList.toggle("hidden",isAdmin);
+document.getElementById("settingsDataDescription").textContent = isAdmin ? "Export platform data or reset task records." : "Export or maintain your personal workspace.";
+
+}
+
+
+function renderAdminOverview(overdueCount,completedCount){
+
+const total = tasks.length;
+const todoCount = tasks.filter(task => task.status === "todo").length;
+const progressCount = tasks.filter(task => task.status === "progress").length;
+
+const health = document.getElementById("adminTaskHealth");
+health.innerHTML = [
+["To Do",todoCount,"#4d70d9"],
+["In Progress",progressCount,"#e6a43a"],
+["Completed",completedCount,"#38a269"],
+["Overdue",overdueCount,"#c84d4d"]
+].map(([label,count,color]) => {
+const percent = total ? Math.round(count / total * 100) : 0;
+return `<div class="admin-health-row"><span>${label}</span><div class="admin-health-track"><div class="admin-health-fill" style="width:${percent}%;background:${color}"></div></div><strong>${count}</strong></div>`;
+}).join("");
+
+const openTasks = tasks.filter(task => task.status !== "completed").sort((a,b) => {
+const priority = {High:3,Medium:2,Low:1};
+return (priority[b.priority] || 0) - (priority[a.priority] || 0);
+}).slice(0,5);
+
+const queue = document.getElementById("adminPriorityQueue");
+queue.innerHTML = openTasks.length ? openTasks.map(task => {
+const owner = users.find(user => user.id === task.ownerId);
+return `<div class="admin-priority-row"><span>${escapeHTML(task.title)}</span><strong>${escapeHTML(task.priority)}</strong><small>${owner ? escapeHTML(owner.name.split(" ")[0]) : "Unassigned"}</small></div>`;
+}).join("") : '<p class="empty-activity">No open tasks.</p>';
+
+const activityRows = document.getElementById("adminActivityRows");
+activityRows.innerHTML = activities.length ? activities.slice(0,12).map(activity => `<div class="admin-activity-row"><div class="admin-activity-icon">${activity.icon}</div><div><p>${escapeHTML(activity.message)}</p><small>${timeAgo(activity.time)}</small></div></div>`).join("") : '<p class="empty-activity">No platform activity yet.</p>';
+
+}
+
+
+function renderAdminPanel(){
+
+if(!currentUser || currentUser.role !== "admin") return;
+
+const adminCount = users.filter(user => user.role === "admin").length;
+const activeCount = users.filter(user => user.active !== false).length;
+
+const search = (document.getElementById("adminUserSearch")?.value || "").toLowerCase().trim();
+const roleFilter = document.getElementById("adminRoleFilter")?.value || "all";
+const statusFilter = document.getElementById("adminStatusFilter")?.value || "all";
+
+let visibleUsers = users.filter(user => {
+const matchesSearch = !search || user.name.toLowerCase().includes(search) || user.email.toLowerCase().includes(search);
+const matchesRole = roleFilter === "all" || (user.role || "user") === roleFilter;
+const matchesStatus = statusFilter === "all" || (statusFilter === "active" ? user.active !== false : user.active === false);
+return matchesSearch && matchesRole && matchesStatus;
+});
+
+document.getElementById("adminUserCount").textContent = users.length;
+document.getElementById("adminUserCountNote").textContent = `${activeCount} active accounts`;
+document.getElementById("adminCount").textContent = adminCount;
+document.getElementById("adminTaskCount").textContent = tasks.length;
+document.getElementById("adminActiveCount").textContent = activeCount;
+
+document.getElementById("adminProgressCount").textContent = tasks.filter(task => task.status === "progress").length;
+const overdueCount = tasks.filter(task => task.deadline && new Date(task.deadline + "T23:59:59") < new Date() && task.status !== "completed").length;
+const completedCount = tasks.filter(task => task.status === "completed").length;
+document.getElementById("adminOverdueCount").textContent = overdueCount;
+
+renderAdminOverview(overdueCount,completedCount);
+
+const taskSearch = (document.getElementById("adminTaskSearch")?.value || "").toLowerCase().trim();
+const taskStatus = document.getElementById("adminTaskStatus")?.value || "all";
+const taskPriority = document.getElementById("adminTaskPriority")?.value || "all";
+
+let visibleTasks = tasks.filter(task => {
+const owner = users.find(user => user.id === task.ownerId);
+const matchesSearch = !taskSearch || task.title.toLowerCase().includes(taskSearch) || task.category.toLowerCase().includes(taskSearch) || (owner && owner.name.toLowerCase().includes(taskSearch));
+const matchesStatus = taskStatus === "all" || task.status === taskStatus;
+const matchesPriority = taskPriority === "all" || task.priority === taskPriority;
+return matchesSearch && matchesStatus && matchesPriority;
+});
+
+const taskRows = document.getElementById("adminTaskRows");
+taskRows.innerHTML = visibleTasks.length ? visibleTasks.map(task => {
+const owner = users.find(user => user.id === task.ownerId);
+const overdue = task.deadline && new Date(task.deadline + "T23:59:59") < new Date() && task.status !== "completed";
+return `<tr>
+<td>${escapeHTML(task.title)}</td>
+<td>${owner ? escapeHTML(owner.name) : "Unassigned"}</td>
+<td><span class="role-badge">${escapeHTML(task.priority)}</span></td>
+<td><span class="status-badge ${task.status === "completed" ? "" : "inactive"}">${task.status === "todo" ? "To Do" : task.status === "progress" ? "In Progress" : "Completed"}</span></td>
+<td>${task.deadline ? `${formatDate(task.deadline)}${overdue ? " • Overdue" : ""}` : "No deadline"}</td>
+<td><button class="admin-action delete" onclick="deleteTaskByAdmin(${task.id})">Delete</button></td>
+</tr>`;
+}).join("") : `<tr><td colspan="6">No tasks match these filters.</td></tr>`;
+
+const rows = document.getElementById("adminUserRows");
+document.getElementById("adminLastUpdated").textContent = `${activeCount} active · ${visibleUsers.length} shown`;
+
+rows.innerHTML = visibleUsers.map(user => {
+
+const isCurrentUser = user.id === currentUser.id;
+const role = user.role || "user";
+const active = user.active !== false;
+const taskCount = tasks.filter(task => task.ownerId === user.id).length;
+
+return `
+<tr>
+<td>${escapeHTML(user.name)}</td>
+<td>${escapeHTML(user.email)}</td>
+<td><span class="role-badge ${role}">${role}</span></td>
+<td><span class="status-badge ${active ? "" : "inactive"}">${active ? "Active" : "Inactive"}</span></td>
+<td>${taskCount}</td>
+<td>
+<button
+class="admin-action"
+onclick="changeUserRole(${user.id})"
+${isCurrentUser ? "disabled" : ""}
+>
+${role === "admin" ? "Make User" : "Make Admin"}
+</button>
+<button
+class="admin-action"
+onclick="toggleUserStatus(${user.id})"
+${isCurrentUser ? "disabled" : ""}
+>
+${active ? "Deactivate" : "Activate"}
+</button>
+<button
+class="admin-action"
+onclick="resetUserPassword(${user.id})"
+${isCurrentUser ? "disabled" : ""}
+>
+Reset Password
+</button>
+<button
+class="admin-action delete"
+onclick="deleteUser(${user.id})"
+${isCurrentUser ? "disabled" : ""}
+>
+Delete
+</button>
+</td>
+</tr>
+`;
+
+}).join("");
+
+}
+
+
+function changeUserRole(id){
+
+if(!currentUser || currentUser.role !== "admin") return;
+
+const user = users.find(item => item.id === id);
+if(!user || user.id === currentUser.id) return;
+
+const adminCount = users.filter(item => item.role === "admin").length;
+
+if(user.role === "admin" && adminCount === 1){
+alert("At least one admin account must remain.");
+return;
+}
+
+user.role = user.role === "admin" ? "user" : "admin";
+localStorage.setItem("taskflowUsers",JSON.stringify(users));
+renderAdminPanel();
+
+}
+
+
+function toggleUserStatus(id){
+
+if(!currentUser || currentUser.role !== "admin") return;
+
+const user = users.find(item => item.id === id);
+if(!user || user.id === currentUser.id) return;
+
+user.active = user.active === false;
+localStorage.setItem("taskflowUsers",JSON.stringify(users));
+renderAdminPanel();
+
+}
+
+
+function saveProfileSettings(){
+
+const name = document.getElementById("settingsName").value.trim();
+const email = document.getElementById("settingsEmail").value.trim().toLowerCase();
+
+if(name.length < 3){alert("Display name must contain at least 3 characters.");return;}
+if(!validEmail(email)){alert("Enter a valid email address.");return;}
+if(users.some(user => user.id !== currentUser.id && user.email === email)){alert("That email is already registered.");return;}
+
+const user = users.find(item => item.id === currentUser.id);
+if(!user) return;
+
+user.name = name;
+user.email = email;
+currentUser.name = name;
+currentUser.email = email;
+
+localStorage.setItem("taskflowUsers",JSON.stringify(users));
+localStorage.setItem("taskflowCurrentUser",JSON.stringify(currentUser));
+updateUser();
+alert("Profile settings saved.");
+
+}
+
+
+function downloadJson(filename,data){
+
+const blob = new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+const url = URL.createObjectURL(blob);
+const link = document.createElement("a");
+link.href = url;
+link.download = filename;
+link.click();
+URL.revokeObjectURL(url);
+
+}
+
+
+function exportUserData(){
+
+const personalTasks = tasks.filter(task => task.ownerId === currentUser.id);
+const personalActivities = activities.filter(activity => !activity.ownerId || activity.ownerId === currentUser.id);
+downloadJson("taskflow-user-data.json",{profile:currentUser,tasks:personalTasks,activities:personalActivities});
+
+}
+
+
+function exportAllUsers(){
+
+downloadJson("taskflow-admin-data.json",{exportedAt:new Date().toISOString(),users,tasks,activities});
+
+}
+
+
+function exportAnalytics(){
+
+downloadJson("taskflow-analytics.json",{generatedAt:new Date().toISOString(),role:currentUser.role,users:currentUser.role === "admin" ? users : undefined,tasks:currentUser.role === "admin" ? tasks : tasks.filter(task => task.ownerId === currentUser.id)});
+
+}
+
+
+function clearCompletedTasks(){
+
+const completedCount = tasks.filter(task => task.ownerId === currentUser.id && task.status === "completed").length;
+if(completedCount === 0){alert("No completed tasks to clear.");return;}
+if(!confirm(`Clear ${completedCount} completed task${completedCount === 1 ? "" : "s"}?`)) return;
+
+tasks = tasks.filter(task => !(task.ownerId === currentUser.id && task.status === "completed"));
+saveTasks();
+renderTasks();
+updateDashboard();
+alert("Completed tasks cleared.");
+
+}
+
+
+function resetPlatformTasks(){
+
+if(!currentUser || currentUser.role !== "admin") return;
+if(!confirm("Reset every task and activity in the platform?")) return;
+
+tasks = [];
+activities = [];
+localStorage.setItem("taskflowTasks","[]");
+localStorage.setItem("taskflowActivities","[]");
+renderAdminPanel();
+alert("Platform tasks and activity have been reset.");
+
+}
+
+
+function resetUserPassword(id){
+
+if(!currentUser || currentUser.role !== "admin") return;
+
+const user = users.find(item => item.id === id);
+if(!user || user.id === currentUser.id) return;
+
+const newPassword = prompt(`Enter a temporary password for ${user.name}:`);
+if(!newPassword) return;
+
+if(newPassword.length < 8){
+alert("The temporary password must contain at least 8 characters.");
+return;
+}
+
+user.password = newPassword;
+localStorage.setItem("taskflowUsers",JSON.stringify(users));
+alert(`Password updated for ${user.email}.`);
+renderAdminPanel();
+
+}
+
+
+function deleteTaskByAdmin(id){
+
+if(!currentUser || currentUser.role !== "admin") return;
+const task = tasks.find(item => item.id === id);
+if(!task) return;
+if(!confirm(`Delete task "${task.title}" for all users?`)) return;
+
+tasks = tasks.filter(item => item.id !== id);
+saveTasks();
+renderAdminPanel();
+
+}
+
+
+function deleteUser(id){
+
+if(!currentUser || currentUser.role !== "admin") return;
+
+const user = users.find(item => item.id === id);
+if(!user || user.id === currentUser.id) return;
+
+const adminCount = users.filter(item => item.role === "admin").length;
+
+if(user.role === "admin" && adminCount === 1){
+alert("At least one admin account must remain.");
+return;
+}
+
+if(!confirm(`Delete account for ${user.name}?`)) return;
+
+users = users.filter(item => item.id !== id);
+tasks = tasks.filter(task => task.ownerId !== id);
+localStorage.setItem("taskflowUsers",JSON.stringify(users));
+saveTasks();
+renderAdminPanel();
 
 }
 
@@ -2916,6 +4318,11 @@ showSignIn();
 ===================================================== */
 
 function openTaskModal(task=null){
+
+if(currentUser && currentUser.role === "admin"){
+showAdminView();
+return;
+}
 
 document.getElementById("taskModal")
 .classList.remove("hidden");
@@ -3150,6 +4557,8 @@ checklist:checklist,
 
 status:"todo",
 
+ownerId:currentUser ? currentUser.id : null,
+
 createdAt:new Date().toISOString()
 
 };
@@ -3212,7 +4621,9 @@ progress.innerHTML = "";
 completed.innerHTML = "";
 
 
-let filtered = [...tasks];
+let filtered = tasks.filter(task =>
+currentUser && task.ownerId === currentUser.id
+);
 
 
 const search =
@@ -3608,9 +5019,9 @@ function changeStatus(id,status){
 
 const task =
 tasks.find(
-task => task.id === id
+ task => task.id === id &&
+ (!currentUser || task.ownerId === currentUser.id)
 );
-
 
 if(!task) return;
 
@@ -3652,7 +5063,8 @@ function editTask(id){
 
 const task =
 tasks.find(
-task => task.id === id
+ task => task.id === id &&
+ (!currentUser || task.ownerId === currentUser.id)
 );
 
 if(task)
@@ -3669,7 +5081,8 @@ function deleteTask(id){
 
 const task =
 tasks.find(
-task => task.id === id
+ task => task.id === id &&
+ (!currentUser || task.ownerId === currentUser.id)
 );
 
 if(!task) return;
@@ -3708,7 +5121,8 @@ function toggleChecklist(taskId,index){
 
 const task =
 tasks.find(
-task => task.id === taskId
+ task => task.id === taskId &&
+ (!currentUser || task.ownerId === currentUser.id)
 );
 
 if(!task) return;
@@ -3788,24 +5202,28 @@ draggedTask = null;
 
 function updateDashboard(){
 
+const personalTasks = tasks.filter(task =>
+currentUser && task.ownerId === currentUser.id
+);
+
 const total =
-tasks.length;
+personalTasks.length;
 
 
 const completed =
-tasks.filter(
+personalTasks.filter(
 task => task.status === "completed"
 ).length;
 
 
 const progress =
-tasks.filter(
+personalTasks.filter(
 task => task.status === "progress"
 ).length;
 
 
 const overdue =
-tasks.filter(task => {
+personalTasks.filter(task => {
 
 if(!task.deadline)
 return false;
@@ -3845,7 +5263,7 @@ document.getElementById("completionRate")
 
 document.getElementById("todoCount")
 .textContent =
-tasks.filter(
+personalTasks.filter(
 task => task.status === "todo"
 ).length;
 
@@ -3900,6 +5318,8 @@ icon:icon,
 
 message:message,
 
+ownerId:currentUser ? currentUser.id : null,
+
 time:new Date().toISOString()
 
 });
@@ -3936,8 +5356,19 @@ return;
 }
 
 
+const personalActivities = activities.filter(activity =>
+!activity.ownerId ||
+!currentUser ||
+activity.ownerId === currentUser.id
+);
+
+if(!personalActivities.length){
+box.innerHTML = '<p class="empty-activity">No activity yet.</p>';
+return;
+}
+
 box.innerHTML =
-activities.slice(0,7).map(activity => `
+personalActivities.slice(0,7).map(activity => `
 
 <div class="activity-item">
 
@@ -4027,9 +5458,11 @@ updateUser();
 
 loadQuote();
 
-renderTasks();
-
-renderActivities();
+if(currentUser.role === "admin"){
+showAdminView();
+}else{
+showDashboardView();
+}
 
 }
 
